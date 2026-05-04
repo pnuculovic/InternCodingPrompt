@@ -4,7 +4,8 @@ version = "0.1.0"
 description = "Flask to FastAPI migration project"
 requires-python = ">=3.11"
 dependencies = [
-    "flask==3.0.0"
+    "fastapi>=0.136.1",
+    "uvicorn>=0.46.0",
 ]
 
 [dependency-groups]
