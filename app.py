@@ -13,7 +13,7 @@ app = FastAPI(title="Task Management API")
 app.config = {}
 
 
-# --- Flask compatibility layer ---
+# Flask compatibility layer
 class FlaskLikeResponse:
     def __init__(self, response):
         self.status_code = response.status_code
@@ -50,7 +50,7 @@ def test_client():
 app.test_client = test_client
 
 
-# --- Storage ---
+# Storage
 tasks = {}
 
 
@@ -66,7 +66,7 @@ class TaskUpdate(BaseModel):
     completed: Optional[bool] = None
 
 
-# --- Routes ---
+# Routes
 @app.get("/tasks")
 async def get_tasks():
     return JSONResponse(list(tasks.values()), status_code=200)
