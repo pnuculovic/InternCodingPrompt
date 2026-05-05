@@ -159,3 +159,50 @@ To run the tests:
 uv sync --dev
 uv run pytest
 ```
+---
+
+## Running the Application
+
+Install dependencies:
+
+```bash
+uv sync --dev
+```
+
+Run locally:
+
+```bash
+uv run uvicorn app:app --reload
+```
+
+Open in browser:
+http://localhost:8000/docs
+
+## Running Tests
+```bash
+uv run pytest
+```
+
+## Docker
+
+Build the image:
+
+```bash
+docker build -t credibly-fastapi .
+```
+
+Run the container:
+
+```bash
+docker run -p 8000:8000 credibly-fastapi
+```
+
+Then open:
+http://localhost:8000/docs
+
+## Notes
+
+- Moved from Flask API to FastAPI
+- Retained the functionality of the current API
+- Confirmed that all the given tasks are working
+- Introduced Docker container for the application
