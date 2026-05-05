@@ -54,7 +54,7 @@ app.test_client = test_client
 tasks = {}
 
 
-# --- Models ---
+# Models
 class TaskCreate(BaseModel):
     title: Optional[str] = None
     description: Optional[str] = ""
